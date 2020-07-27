@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mongodb:
+    image: 'mvertes/alpine-mongo'
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    ports:
+      - '9090:8080'
